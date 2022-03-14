@@ -58,6 +58,7 @@ export const chains : Chains = {
         chainId: 97,
         rpcUrls: ["https://data-seed-prebsc-1-s1.binance.org:8545/"],
         nodes: [
+          // Should be replaced with your own nodes !!
           'wss://speedy-nodes-nyc.moralis.io/5b5c7512e66bceec6b8f6b0f/bsc/testnet/ws',
           'wss://apis.ankr.com/wss/3afa17c5b8c64938a459f2353d9444af/c01f0182eaca79b1d50bde6d39631624/binance/full/test'
         ],
@@ -69,6 +70,7 @@ export const chains : Chains = {
         chainId: 56,
         rpcUrls: ["https://bsc-dataseed1.defibit.io/"],
         nodes: [
+          // Should be replaced with your own nodes !!
           'wss://bsc-mainnet.nodereal.io/ws/v1/7ca4846605a94d17be21f498514d9df5',
           'wss://speedy-nodes-nyc.moralis.io/5b5c7512e66bceec6b8f6b0f/bsc/mainnet/ws',
           'wss://apis.ankr.com/wss/d0226aca0bfa4d119eedd79678a3d485/c01f0182eaca79b1d50bde6d39631624/binance/full/main'
@@ -94,22 +96,11 @@ const environmentUrls: EnvironmentUrls = {
 
 class Config {
   public environment: Environment = 'development'
-  //chain: Chain = environments.development.chain
-
-  token: Token = {
-    ticker: 'GLD',
-    decimals: 18
-  }
-
-  feeUsdPerAction = 0.25 // This value in fee token will be used for each transaction
 
   constructor() {
     this.environment = this.setEnvironment()
     let location : any | undefined;
     if (location !== undefined) console.log("Current environment : " + this.environment)
-
-    //this.token.pool = environments[this.environment].token.pool
-    //this.chain = environments[this.environment].chain
   }
 
   private setEnvironment() : Environment {

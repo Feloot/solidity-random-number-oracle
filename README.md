@@ -4,6 +4,8 @@ Generic contract and oracle for requesting/returning randomly generated numbers.
 
 Don't forget to update oracles/randomNumber.ts with the contract address once it is deployed.
 
+The config.ts file is configured with sample nodes but should be replaced with your own.
+
 ### Test
 ```shell
 npx hardhat test

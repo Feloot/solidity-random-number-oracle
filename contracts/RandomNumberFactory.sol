@@ -71,7 +71,7 @@ contract RandomNumberFactory is OwnableUpgradeable, AccessControlEnumerableUpgra
 
   /**
     * @dev Updates the request with a given random number ;
-    *      Sends the randomly generated number back to the caller contract and cleans up storage
+    *      Sends the randomly generated number back to the caller contract
     */
   function response(uint requestId, uint randomNumber) external {
     require(hasRole(ORACLE_ROLE, _msgSender()), "Access forbidden");
